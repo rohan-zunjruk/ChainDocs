@@ -1,0 +1,158 @@
+.document-notification {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 2000;
+  animation: slideIn 0.3s ease-out;
+  max-width: 400px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notification-content {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.notification-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.notification-text {
+  flex: 1;
+}
+
+.notification-text h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.notification-title {
+  margin: 0 0 0.25rem 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.notification-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.notification-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.btn-claim-now {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.btn-claim-now:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-claim-now:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-view-now {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-view-now:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.btn-dismiss {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  align-self: flex-start;
+}
+
+.btn-dismiss:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .document-notification {
+    right: 10px;
+    left: 10px;
+    max-width: none;
+    top: 70px;
+  }
+
+  .notification-content {
+    flex-direction: column;
+  }
+
+  .notification-actions {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .btn-claim-now,
+  .btn-view-now {
+    flex: 1;
+  }
+}

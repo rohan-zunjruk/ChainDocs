@@ -1,0 +1,62 @@
+.network-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.network-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.network-label {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+}
+
+.network-select {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: white;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.network-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.network-warning {
+  font-size: 0.85rem;
+}
+
+.warning-text {
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+.info-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .network-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .network-select {
+    width: 100%;
+  }
+}
