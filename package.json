@@ -24,7 +24,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "vite"
+    "start": "vite",
+    "setup": "npm install"
   },
   "optionalDependencies": {
     "@esbuild/win32-x64": "^0.27.3"
