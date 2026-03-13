@@ -42,7 +42,7 @@ const NetworkSelector = ({ network, onNetworkChange }) => {
           <span className="warning-text">⚠️ Mainnet uses real SOL - be careful!</span>
         )}
         {network === WalletAdapterNetwork.Devnet && (
-          <span className="info-text">ℹ️ Using Devnet - documents are stored locally (not on-chain yet)</span>
+          <span className="info-text">ℹ️ Using Devnet - documents are stored on Solana test network (not on-chain yet)</span>
         )}
         {network === WalletAdapterNetwork.Testnet && (
           <span className="info-text">ℹ️ Using Testnet - documents are stored locally (not on-chain yet)</span>
